@@ -21,6 +21,7 @@ typedef struct matrices
 	int matrizR [MAX_MATRIZ][MAX_MATRIZ];	// matriz Resultante para la suma , resta , multuplicacion
 	int matrizInv [MAX_MATRIZ][MAX_MATRIZ]	 // matriz inversa
 	int matrizInv2 [MAX_MATRIZ][MAX_MATRIZ]	// matriz inversa
+
 	
 }matrices;
 //DEFINICIONES DE TIPOS DE DATO

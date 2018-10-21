@@ -116,6 +116,7 @@ int main(int argc, char const *argv[])
 	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 2 TRANSPUESTA--------------------------",123,18);
 	imprimeMatrizT(matrixs.matriz2, 127,20);
 	
+	
 	printf("\n \n \n");
 	return 0;
 }
