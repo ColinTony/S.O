@@ -107,6 +107,7 @@ void imprimeMatriz(int matriz[MAX_MATRIZ][MAX_MATRIZ] ,int x , int y)
 * la matriz
 */
 
+
 void imprimeMatrizT(int matriz[MAX_MATRIZ][MAX_MATRIZ] ,int x , int y)
 {
 	int i;  // contador
