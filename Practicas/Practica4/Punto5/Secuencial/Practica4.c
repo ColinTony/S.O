@@ -36,7 +36,10 @@ int main(int argc, char const *argv[])
 	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 2 --------------------------",75,3);
 	imprimeMatriz(matrixs.matriz2, 77,5);
 	
+
+
 	imprimeXY(AMARILLO_SUB,"----------------------- OPERACIONES --------------------------",50,16);
+	
 	
 	// -------------------------------------------------SUMA ------------------------------------
 	// imprime la primer matriz
@@ -55,9 +58,11 @@ int main(int argc, char const *argv[])
 	// matriz resutladro la imprimimos
 	imprimeXY(ROJO_SUB,"----------------- MATRIZ RESULTANTE ------------------------",150,18);
 	imprimeMatriz(matrixs.matrizR, 150,20);
+	//-------------------------------------------FIN DE LA SUMA ------------------------------
+
 
 	// ----------------------------------------------RESTA--------------------------------------
-	
+	resetResult(&matrixs);
 	// imprime la primer matriz
 	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 1 --------------------------",3,33);
 	imprimeMatriz(matrixs.matriz, 5,35);
@@ -67,7 +72,7 @@ int main(int argc, char const *argv[])
 	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 2 --------------------------",75,33);
 	imprimeMatriz(matrixs.matriz2, 77,35);
 	// igual
-	imprimeXY(BLANCO_PAR," IGUAL (=) ",135,24);
+	imprimeXY(BLANCO_PAR," IGUAL (=) ",135,39);
 	
 	// sumamos matrices
 	resta(&matrixs);
@@ -75,7 +80,42 @@ int main(int argc, char const *argv[])
 	imprimeXY(ROJO_SUB,"----------------- MATRIZ RESULTANTE ------------------------",150,33);
 	imprimeMatriz(matrixs.matrizR, 150,35);
 
+	// ------------------------------------------- FIN DE LA RESTA ------------------------------------
 
-	printf("\n");
+	imprimeXY(AMARILLO_SUB,"----------------------- PRESIONA ENTER PARA VER LAS DEMAS OPERACIONES --------------------------",50,50);
+	getchar();
+	borrarPantalla();
+	imprimeXY(AMARILLO_NEG,"------------ Multiplicacion , Inversa y Tanspuesta----------",50,0);
+	
+	// -------------------------------------------------MULTIPLICACION ------------------------------------7
+	resetResult(&matrixs);
+	// imprime la primer matriz
+	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 1 --------------------------",3,3);
+	imprimeMatriz(matrixs.matriz, 5,5);
+	// operandor
+	imprimeXY(BLANCO_PAR," MULP (*) ",63,10);
+	// imprime la segunda matriz
+	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 2 --------------------------",75,3);
+	imprimeMatriz(matrixs.matriz2, 77,5);
+	// igual
+	imprimeXY(BLANCO_PAR," IGUAL (=) ",135,10);
+	
+	// sumamos matrices
+	mulp(&matrixs);
+	// matriz resutladro la imprimimos
+	imprimeXY(ROJO_SUB,"----------------- MATRIZ RESULTANTE ------------------------",150,3);
+	imprimeMatriz(matrixs.matrizR, 150,5);
+	//-------------------------------------------FIN DE LA MULTIPLICACION  ------------------------------
+	
+	// -------------------------------------------------TRANSPUESTA ------------------------------------
+	// imprime la primer matriz
+	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 1 TRANSPUESTA--------------------------",3,18);
+	imprimeMatrizT(matrixs.matriz, 5,20);
+
+	// imprime la segunda matriz
+	imprimeXY(CIAN_CLARO_SUB,"----------------------- MATRIZ 2 TRANSPUESTA--------------------------",123,18);
+	imprimeMatrizT(matrixs.matriz2, 127,20);
+	
+	printf("\n \n \n");
 	return 0;
 }
