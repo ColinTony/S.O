@@ -151,5 +151,5 @@ void llenarArbol(arbol_bin *A)
 // Funcion para evaluar el arbol con el recorrido ¿postOrden?
 int evaluarArbol(arbol_bin *A)
 {
-
+	
 } 
